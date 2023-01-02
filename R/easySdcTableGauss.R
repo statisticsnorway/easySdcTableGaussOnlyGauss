@@ -1464,7 +1464,12 @@ getInfo <- function(object, ...) object
 #' @importFrom SSBtools ModelMatrix
 protectTable <- function(object, ...) {
   mm <- ModelMatrix(object$data, hierarchies = object$dimList, crossTable = TRUE)
-  cbind(mm$crossTable, Freq = as.vector(Matrix::crossprod(mm$modelMatrix, object$data[[object$freqVarInd]])), sdcStatus = "s")
+  if (is.null(object$freqVarInd)) {
+    Freq <- as.vector(Matrix::colSums(mm$modelMatrix))
+  } else {
+    Freq <- as.vector(Matrix::crossprod(mm$modelMatrix, object$data[[object$freqVarInd]]))
+  }
+  cbind(mm$crossTable, Freq = Freq, sdcStatus = "s")
 }
 
 
