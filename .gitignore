@@ -27,3 +27,6 @@ vignettes/*.pdf
 # R Environment Variables
 .Renviron
 easySdcTableGaussOnlyGauss.Rproj
+git_branch_-d.bat
+git_fetch_-p_origin.bat
+.gitignore
