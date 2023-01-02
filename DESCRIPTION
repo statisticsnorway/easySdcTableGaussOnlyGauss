@@ -1,8 +1,8 @@
 Package: easySdcTableOnlyGauss
 Type: Package
 Title: A Lightweight Version of 'easySdcTable' that does not Depend on 'sdcTable'
-Version: 0.1.0
-Date: 2022-01-27
+Version: 0.2.0
+Date: 2023-01-02
 Authors@R: person("Øyvind", "Langsrud", role = c("aut", "cre"), email = "oyl@ssb.no")
 Author: Øyvind Langsrud [aut, cre]
 Maintainer: Øyvind Langsrud <oyl@ssb.no>
@@ -14,5 +14,5 @@ Description: The main function, ProtectTable(), performs table suppression accor
  The suppression method Gauss is the only available method in this lightweight version.
 License: Apache License 2.0 | file LICENSE
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.2
 Encoding: UTF-8
